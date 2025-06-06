@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>麥當勞漢堡商城</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #fffbe7; }
+    nav { display: flex; justify-content: space-between; align-items: center; background: #ffcc00; padding: 10px 20px; }
+    .logo { height: 50px; }
+    nav ul { list-style: none; display: flex; gap: 15px; padding: 0; margin: 0; }
+    nav a { text-decoration: none; color: #000; font-weight: bold; }
+    .search-bar { margin: 20px auto; text-align: center; }
+    .search-bar input[type="text"] { padding: 8px; width: 200px; border-radius: 20px; border: 1px solid #ccc; }
+    .search-bar button { padding: 8px 12px; border-radius: 20px; border: none; background-color: #ff6600; color: white; cursor: pointer; }
+    .carousel { position: relative; width: 100%; max-width: 800px; margin: 20px auto; overflow: hidden; }
+    .carousel-img { width: 100%; display: none; }
+    .carousel-img.active { display: block; }
+    .carousel-caption { position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.5); color: white; padding: 10px; border-radius: 5px; }
+    main { padding: 20px; text-align: center; }
+    .products { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px; }
+    .card { width: 200px; border: 1px solid #ccc; border-radius: 10px; padding: 10px; background-color: #fff; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
+    .card img { width: 100%; border-radius: 10px; }
+    .card h2 { font-size: 18px; margin: 10px 0 5px; }
+    .card p { font-size: 14px; }
+    .card button { background-color: #ff6600; color: white; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; }
+    footer { text-align: center; padding: 15px; background: #333; color: #fff; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="images/logo.png" alt="麥當勞 Logo" class="logo" />
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="menu.html">菜單</a></li>
+        <li><a href="#">優惠活動</a></li>
+        <li><a href="#">分店資訊</a></li>
+        <li><a href="#">會員專區</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="搜尋商品..." />
+    <button>搜尋</button>
+  </div>
+
+  <section class="carousel">
+    <div class="carousel-item">
+      <img src="images/天天有堡.png" alt="天天有堡" class="carousel-img active" />
+      <div class="carousel-caption">天天有堡，天天快樂！</div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/1+1.png" alt="1+1 優惠" class="carousel-img" />
+      <div class="carousel-caption">1+1 超值搭配</div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/大口吃.png" alt="大口吃系列" class="carousel-img" />
+      <div class="carousel-caption">大口吃才過癮！</div>
+    </div>
+  </section>
+
+  <main>
+    <h1>歡迎來到麥當勞漢堡商城</h1>
+    <section class="products">
+      <div class="card">
+        <img src="images/雞塊.png" alt="麥克雞塊" />
+        <h2>麥克雞塊</h2>
+        <p>香酥多汁的經典點心！只要 NT$65</p>
+        <button>加入購物車</button>
+      </div>
+      <div class="card">
+        <img src="images/大麥克.png" alt="大麥克" />
+        <h2>大麥克</h2>
+        <p>經典雙層牛肉堡，只要 NT$109</p>
+        <button>加入購物車</button>
+      </div>
+      <div class="card">
+        <img src="images/牛肉吉士堡.png" alt="牛肉吉士堡" />
+        <h2>牛肉吉士堡</h2>
+        <p>濃郁起司搭配牛肉餅，只要 NT$89</p>
+        <button>加入購物車</button>
+      </div>
+      <div class="card">
+        <img src="images/麥香魚.png" alt="麥香魚" />
+        <h2>麥香魚</h2>
+        <p>金黃酥脆魚排堡，只要 NT$79</p>
+        <button>加入購物車</button>
+      </div>
+      <div class="card">
+        <img src="images/麥香雞.png" alt="麥香雞" />
+        <h2>麥香雞</h2>
+        <p>雞排搭配美乃滋，只要 NT$79</p>
+        <button>加入購物車</button>
+      </div>
+      <div class="card">
+        <img src="images/薯條.png" alt="薯條" />
+        <h2>薯條</h2>
+        <p>酥脆薯條 S/M/L 任你選</p>
+        <button>加入購物車</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 麥當勞股份有限公司 | 聯絡我們 | 隱私政策</p>
+  </footer>
+
+  <script>
+    let current = 0;
+    const images = document.querySelectorAll(".carousel-img");
+
+    setInterval(() => {
+      images[current].classList.remove("active");
+      current = (current + 1) % images.length;
+      images[current].classList.add("active");
+    }, 3000);
+  </script>
+</body>
+</html>
