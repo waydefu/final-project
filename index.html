@@ -20,12 +20,12 @@
     .carousel-img { max-height: 350px; width: auto; height: auto; object-fit: contain; margin: 0 auto; display: block; }
     .carousel-inner { background: #f8f8f8; text-align: center; padding: 10px; }
     .carousel-indicators { bottom: 10px; }
-    .products { margin-top: 20px; }
+    .products, .portfolio-section { margin-top: 20px; }
     .card { transition: transform 0.3s; }
     .card:hover { transform: scale(1.05); }
     .card img { max-height: 140px; width: auto; height: auto; object-fit: contain; margin: 0 auto; }
-    .card button { background-color: #ff6600; transition: background-color 0.3s; }
-    .card button:hover { background-color: #e65c00; }
+    .card button, .card a.btn { background-color: #ff6600; transition: background-color 0.3s; }
+    .card button:hover, .card a.btn:hover { background-color: #e65c00; }
     footer { background: #333; color: #fff; padding: 15px; margin-top: 40px; }
     /* Sidebar styles */
     .sidebar { position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background: #ffcc00; transition: left 0.3s; z-index: 900; }
@@ -35,6 +35,8 @@
     .sidebar a { color: #000; text-decoration: none; font-weight: bold; }
     .sidebar a:hover { color: #ff6600; }
     body.sidebar-open { padding-left: 250px; }
+    .portfolio-section .pdf-list { background: #f0f0f0; padding: 15px; margin-bottom: 20px; }
+    .portfolio-section .pdf-list a { margin-right: 10px; }
     @media (max-width: 768px) {
       .carousel-img { max-height: 250px; }
       .card img { max-height: 120px; }
@@ -67,7 +69,7 @@
             <li class="nav-item"><a class="nav-link" href="menu.html">菜單</a></li>
             <li class="nav-item"><a class="nav-link" href="promotions.html">優惠活動</a></li>
             <li class="nav-item"><a class="nav-link" href="stores.html">分店資訊</a></li>
-            <li class="nav-item"><a class="nav-link" href="members.html">會員</a></li>
+            <li class="nav-item"><a class="nav-link" href="members.html">會員專區</a></li>
           </ul>
         </div>
       </div>
@@ -81,7 +83,7 @@
       <li><a href="menu.html"><i class="fas fa-utensils"></i> 菜單</a></li>
       <li><a href="promotions.html"><i class="fas fa-tags"></i> 優惠活動</a></li>
       <li><a href="stores.html"><i class="fas fa-map-marker-alt"></i> 分店資訊</a></li>
-      <li><a href="members.html"><i class="fas fa-user"></i> 會員</a></li>
+      <li><a href="members.html"><i class="fas fa-user"></i> 會員專區</a></li>
     </ul>
   </div>
 
@@ -193,6 +195,60 @@
             <h2 class="card-title">薯條</h2>
             <p class="card-text">酥脆薯條 S/M/L 任你選</p>
             <button class="btn add-to-cart" data-name="薯條" data-price="55">加入購物車</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+      <h2 class="text-center my-4">數位媒體設計作品集</h2>
+      <div class="pdf-list">
+        <h4>作品集PDF下載</h4>
+        <a href="file:///C:/Users/user/Desktop/期末作業/0425.pdf" class="btn btn-primary" download>PDF 0425 下載</a>
+        <a href="file:///C:/Users/user/Desktop/期末作業/0502.pdf" class="btn btn-primary" download>PDF 0502 下載</a>
+        <a href="file:///C:/Users/user/Desktop/期末作業/0509.pdf" class="btn btn-primary" download>PDF 0509 下載</a>
+        <a href="file:///C:/Users/user/Desktop/期末作業/0606.pdf" class="btn btn-primary" download>PDF 0606 下載</a>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="images/作業1.png" class="card-img-top" alt="2020年04月設計">
+            <div class="card-body">
+              <h5 class="card-title">2020年04月</h5>
+              <p class="card-text">InDesign設計截圖</p>
+              <a href="file:///C:/Users/user/Desktop/期末作業/0425.pdf" class="btn btn-primary" download>See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="images/作業2.png"  class="card-img-top" alt="2020年05月設計">
+            <div class="card-body">
+              <h5 class="card-title">2020年05月</h5>
+              <p class="card-text">InDesign設計截圖</p>
+              <a href="file:///C:/Users/user/Desktop/期末作業/0502.pdf" class="btn btn-primary" download>See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="images/作業3.png"  class="card-img-top" alt="2020年06月設計">
+            <div class="card-body">
+              <h5 class="card-title">2020年06月</h5>
+              <p class="card-text">InDesign設計截圖</p>
+              <a href="file:///C:/Users/user/Desktop/期末作業/0509.pdf" class="btn btn-primary" download>See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <img src="images/作業4.png"  class="card-img-top" alt="2020年06月設計">
+            <div class="card-body">
+              <h5 class="card-title">2020年06月</h5>
+              <p class="card-text">InDesign設計截圖</p>
+              <a href="file:///C:/Users/user/Desktop/期末作業/0606.pdf" class="btn btn-primary" download>See More</a>
+            </div>
           </div>
         </div>
       </div>
