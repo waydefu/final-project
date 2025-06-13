@@ -20,6 +20,28 @@
     .carousel-img { max-height: 350px; width: auto; height: auto; object-fit: contain; margin: 0 auto; display: block; }
     .carousel-inner { background: #f8f8f8; text-align: center; padding: 10px; }
     .carousel-indicators { bottom: 10px; }
+    /* Enhanced carousel arrow styles */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%; /* Clickable area */
+      background: rgba(0, 0, 0, 0.5); /* Darker semi-transparent background */
+      border-radius: 8px; /* Rounded corners */
+      opacity: 0.8; /* Default opacity */
+      transition: opacity 0.3s ease;
+    }
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+      opacity: 1; /* Full opacity on hover */
+      background: rgba(0, 0, 0, 0.7); /* Darker on hover */
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-size: 60%; /* Slightly larger arrows */
+      width: 40px; /* Larger icon size */
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.2); /* Light background for contrast */
+      border-radius: 50%; /* Circular icon background */
+    }
     .products, .portfolio-section { margin-top: 20px; }
     .card { transition: transform 0.3s; }
     .card:hover { transform: scale(1.05); }
@@ -42,6 +64,10 @@
       .card img { max-height: 120px; }
       body.sidebar-open { padding-left: 0; }
       .sidebar.active { z-index: 1000; }
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 10%; /* Wider clickable area on mobile */
+      }
     }
     @media (max-width: 576px) {
       .carousel-img { max-height: 200px; }
@@ -55,7 +81,6 @@
   <header>
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
-        <!-- Sidebar toggle button inside navbar -->
         <button class="btn sidebar-toggle me-2" type="button"><i class="fas fa-bars"></i></button>
         <a class="navbar-brand" href="index.html">
           <img src="images/logo.png" alt="McDonald's Logo">
@@ -200,15 +225,16 @@
       </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio Section with Updated PDF Links -->
     <section class="portfolio-section">
       <h2 class="text-center my-4">數位媒體設計作品集</h2>
       <div class="pdf-list">
         <h4>作品集PDF下載</h4>
-        <a href="file:///C:/Users/user/Desktop/期末作業/0425.pdf" class="btn btn-primary" download>PDF 0425 下載</a>
-        <a href="file:///C:/Users/user/Desktop/期末作業/0502.pdf" class="btn btn-primary" download>PDF 0502 下載</a>
-        <a href="file:///C:/Users/user/Desktop/期末作業/0509.pdf" class="btn btn-primary" download>PDF 0509 下載</a>
-        <a href="file:///C:/Users/user/Desktop/期末作業/0606.pdf" class="btn btn-primary" download>PDF 0606 下載</a>
+        <!-- Updated to relative paths assuming PDFs are in assets/pdfs/ -->
+        <a href="0425.pdf" class="btn btn-primary" download>PDF 0425 下載</a>
+        <a href="0502.pdf" class="btn btn-primary" download>PDF 0502 下載</a>
+        <a href="0509.pdf" class="btn btn-primary" download>PDF 0509 下載</a>
+        <a href="0606.pdf" class="btn btn-primary" download>PDF 0606 下載</a>
       </div>
       <div class="row">
         <div class="col-md-4 col-sm-6 mb-4">
@@ -217,37 +243,37 @@
             <div class="card-body">
               <h5 class="card-title">2020年04月</h5>
               <p class="card-text">InDesign設計截圖</p>
-              <a href="file:///C:/Users/user/Desktop/期末作業/0425.pdf" class="btn btn-primary" download>See More</a>
+              <a href="assets/pdfs/0425.pdf" class="btn btn-primary" download>See More</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 mb-4">
           <div class="card h-100">
-            <img src="images/作業2.png"  class="card-img-top" alt="2020年05月設計">
+            <img src="images/作業2.png" class="card-img-top" alt="2020年05月設計">
             <div class="card-body">
               <h5 class="card-title">2020年05月</h5>
               <p class="card-text">InDesign設計截圖</p>
-              <a href="file:///C:/Users/user/Desktop/期末作業/0502.pdf" class="btn btn-primary" download>See More</a>
+              <a href="assets/pdfs/0502.pdf" class="btn btn-primary" download>See More</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 mb-4">
           <div class="card h-100">
-            <img src="images/作業3.png"  class="card-img-top" alt="2020年06月設計">
+            <img src="images/作業3.png" class="card-img-top" alt="2020年06月設計">
             <div class="card-body">
               <h5 class="card-title">2020年06月</h5>
               <p class="card-text">InDesign設計截圖</p>
-              <a href="file:///C:/Users/user/Desktop/期末作業/0509.pdf" class="btn btn-primary" download>See More</a>
+              <a href="assets/pdfs/0509.pdf" class="btn btn-primary" download>See More</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-6 mb-4">
           <div class="card h-100">
-            <img src="images/作業4.png"  class="card-img-top" alt="2020年06月設計">
+            <img src="images/作業4.png" class="card-img-top" alt="2020年06月設計">
             <div class="card-body">
               <h5 class="card-title">2020年06月</h5>
               <p class="card-text">InDesign設計截圖</p>
-              <a href="file:///C:/Users/user/Desktop/期末作業/0606.pdf" class="btn btn-primary" download>See More</a>
+              <a href="assets/pdfs/0606.pdf" class="btn btn-primary" download>See More</a>
             </div>
           </div>
         </div>
