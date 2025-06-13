@@ -59,11 +59,12 @@
     body.sidebar-open { padding-left: 250px; }
     .portfolio-section .pdf-list { background: #f0f0f0; padding: 15px; margin-bottom: 20px; }
     .portfolio-section .pdf-list a { margin-right: 10px; }
+    /* Style for the welcome header */
     h1.welcome-text {
-    color: #FFFF00; /* Yellow text */
-    background-color: #FF0000; /* Red background */
-    padding: 10px; /* Add padding for better appearance */
-    border-radius: 5px; /* Optional: rounded corners */
+      color: #FFFF00; /* Yellow text */
+      background-color: #FF0000; /* Red background */
+      padding: 10px; /* Add padding for better appearance */
+      border-radius: 5px; /* Optional: rounded corners */
     }
     @media (max-width: 768px) {
       .carousel-img { max-height: 250px; }
@@ -167,7 +168,7 @@
 
   <!-- Main Content -->
   <main class="container">
-    <h1 class="text-center my-4">歡迎來到麥當勞</h1>
+    <h1 class="text-center my-4 welcome-text">歡迎來到麥當勞</h1>
     <section class="products row" id="productList">
       <div class="col-md-4 col-sm-6 mb-4">
         <div class="card h-100">
@@ -236,7 +237,6 @@
       <h2 class="text-center my-4">數位媒體設計作品集</h2>
       <div class="pdf-list">
         <h4>作品集PDF下載</h4>
-        <!-- Updated to relative paths assuming PDFs are in assets/pdfs/ -->
         <a href="0425.pdf" class="btn btn-primary" download>PDF 0425 下載</a>
         <a href="0502.pdf" class="btn btn-primary" download>PDF 0502 下載</a>
         <a href="0509.pdf" class="btn btn-primary" download>PDF 0509 下載</a>
